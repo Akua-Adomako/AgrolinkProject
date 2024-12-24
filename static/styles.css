@@ -1,0 +1,352 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+nav{
+  background-color: white !important;
+  text-align: center;
+}
+nav .nav-link {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #388e3c;
+  /* Green color for hover */
+}
+
+footer .text-success {
+  color: #388e3c !important;
+}
+
+footer i {
+  margin-right: 8px;
+}
+
+/* Hero Section Styling */
+.hero {
+  position: relative;
+  background-image: url('./images/hero.jpg');
+  /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  /* Dark overlay for better text visibility */
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  background-color: #388e3c;
+  /* Green color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.hero .btn:hover {
+  background-color: #2c6e2f;
+  /* Darker green on hover */
+}
+
+/* About Section Styling */
+#about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about-section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #388e3c;
+  /* Green color */
+}
+
+.about-section-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  margin-bottom: 30px;
+}
+
+.about-mission-title,
+.about-vision-title {
+  font-size: 2rem;
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.about-mission-text,
+.about-vision-text {
+  font-size: 1.125rem;
+  color: #444;
+}
+
+.value-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.value-card i {
+  color: #388e3c;
+}
+
+.value-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.value-card-text {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Specific styling for each value card */
+#sustainability {
+  background-color: #e8f5e9;
+}
+
+#community {
+  background-color: #e8f5e9;
+}
+
+#trust {
+  background-color: #e8f5e9;
+}
+
+
+/* Products Section Styling */
+#products {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.products-section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #388e3c;
+  /* Green color */
+}
+
+.products-section-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.125rem;
+  color: #388e3c;
+  margin-top: 10px;
+}
+
+.btn-view {
+  margin-top: 15px;
+  background-color: #388e3c !important;
+  border: none;
+}
+
+.btn-view:hover {
+  background-color: #307c34 !important;
+}
+
+.login-signup-prompt {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #444;
+}
+
+.login-signup-prompt a {
+  font-weight: 500;
+  color: #388e3c;
+  text-decoration: none;
+}
+
+.login-signup-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section Styling */
+.contact-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contact-section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #388e3c;
+  /* Green color */
+}
+
+.contact-section-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.contact-form .btn-success {
+  background-color: #388e3c;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.125rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-success:hover {
+  background-color: #2c6f2d;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 767px) {
+  .contact-form {
+    margin-bottom: 30px;
+  }
+}
+
+
+#add-product {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#add-product .card-header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#add-product .form-control {
+  border: 1.5px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#add-product .btn {
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+
+.uploaded-image {
+  object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+  #add-product {
+    padding: 15px;
+  }
+
+  #add-product .btn {
+    font-size: 14px;
+  }
+}

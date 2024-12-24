@@ -1,0 +1,24 @@
+{% extends "base_logged_in.html" %}
+
+{% block content %}
+<section id="buy-confirmation" class="py-5">
+    <div class="container">
+        <h3 class="text-center">Confirm Purchase</h3>
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">{{ product['name'] }}</h5>
+                <p class="card-text">{{ product['description'] }}</p>
+                <p class="card-text"><strong>Price:</strong> ${{ product['price'] }}</p>
+                <p class="card-text"><strong>Uploaded by:</strong> {{ product['full_name'] }}</p>
+                <p class="card-text"><strong>Uploader Email:</strong> {{ product['email'] }}</p>
+                <img src="{{ url_for('uploaded_file', filename=product['image_filename']) }}" alt="{{ product['name'] }}" class="uploaded-image image-fluid" width="200" height="200">
+                
+                <form method="POST" action="{{ url_for('buy_product', product_id=product['id']) }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="btn btn-success btn-lg mt-3">Confirm Purchase</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

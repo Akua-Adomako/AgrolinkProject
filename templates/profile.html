@@ -1,0 +1,37 @@
+{% extends 'base_logged_in.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Profile</h2>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">User Information</h4>
+                </div>
+                <div class="card-body">
+                    {% if user %}
+                    <div class="mb-3">
+                        <strong>Full Name:</strong>
+                        <p>{{ user['full_name'] }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Email:</strong>
+                        <p>{{ user['email'] }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <strong>Joined On:</strong>
+                        <p>{{ user['created_at'] }}</p>
+                    </div>
+                    <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+                    {% else %}
+                    <p class="text-center text-danger">User not found!</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

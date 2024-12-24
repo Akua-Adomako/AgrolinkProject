@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroLink - Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-success" href="#">
+                <i class="fas fa-leaf fa-lg mr-2"></i> AgroLink
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="{{ url_for('dashboard') }}"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="{{ url_for('feed') }}"><i class="fas fa-seedling"></i> Feed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="{{ url_for('add_product') }}"><i class="fas fa-plus-circle"></i> Add Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="{{ url_for('profile') }}"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main class="container py-5">
+        {% block content %}
+        <!-- Content for specific logged-in pages will go here -->
+        {% endblock %}
+    </main>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="container mt-4">
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="navbar-brand d-flex align-items-center text-white">
+                        <i class="fas fa-leaf fa-lg mr-2"></i> AgroLink
+                    </a>
+                    <p>Your one-stop platform connecting farmers with buyers to ensure a seamless, sustainable agricultural marketplace.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="text-success">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('dashboard') }}" class="text-white">Dashboard</a></li>
+                        <li><a href="{{ url_for('feed') }}" class="text-white">Feed</a></li>
+                        <li><a href="{{ url_for('add_product') }}" class="text-white">Add Product</a></li>
+                        <li><a href="{{ url_for('profile') }}" class="text-white">Profile</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-success">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Farm Lane, AgroCity</li>
+                        <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> support@agrolink.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-success">Follow Us</h5>
+                    <div>
+                        <a href="https://facebook.com" class="text-white mr-3"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" class="text-white mr-3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-3">
+                <p>&copy; 2024 AgroLink. All rights reserved.</p>
+            </div>
+        </div>    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

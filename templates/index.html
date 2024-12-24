@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="container">
+            <h1>Welcome to AgroLink</h1>
+            <p>Your trusted platform for connecting farmers and buyers</p>
+            <a href="#" class="btn btn-light btn-lg" data-toggle="modal" data-target="#loginModal">Browse Products</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="about-section-title">About AgroLink</h2>
+                <p class="about-section-subtitle">Connecting farmers and buyers for a sustainable future.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h3 class="about-mission-title">Our Mission</h3>
+                    <p class="about-mission-text">At AgroLink, our mission is to provide a seamless platform where farmers can showcase their products and buyers can access fresh, locally sourced produce. We aim to bridge the gap between agriculture and the consumer market.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h3 class="about-vision-title">Our Vision</h3>
+                    <p class="about-vision-text">Our vision is to become the leading online platform for connecting farmers and buyers, driving growth in the agriculture sector, and promoting sustainability and food security worldwide.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="value-card" id="sustainability">
+                    <i class="fas fa-leaf fa-3x mb-3 text-success"></i>
+                    <h4 class="value-card-title">Sustainability</h4>
+                    <p class="value-card-text">We are committed to promoting sustainable farming practices that help preserve our planet for future generations.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card" id="community">
+                    <i class="fas fa-users fa-3x mb-3 text-success"></i>
+                    <h4 class="value-card-title">Community</h4>
+                    <p class="value-card-text">Building strong relationships with farmers and buyers is at the heart of AgroLink’s success.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card" id="trust">
+                    <i class="fas fa-handshake fa-3x mb-3 text-success"></i>
+                    <h4 class="value-card-title">Trust</h4>
+                    <p class="value-card-text">We value transparency and trust, ensuring that all transactions on AgroLink are secure and reliable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Products Section -->
+<section id="products" class="products-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="products-section-title">Our Products</h2>
+                <p class="products-section-subtitle">Discover a variety of fresh and high-quality products directly from the farm.</p>
+            </div>
+        </div>
+
+        <!-- Products Grid (Preview) -->
+        <div class="row">
+            <!-- Product Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="product-card">
+                    <img src="../static/images/tomato.jpg" class="product-image" alt="Product 1">
+                    <div class="product-info">
+                        <h4 class="product-name">Fresh Tomatoes</h4>
+                        <p class="product-price">$3.99 per kg</p>
+                        <button class="btn btn-primary btn-view" data-toggle="modal" data-target="#loginModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="product-card">
+                    <img src="../static/images/potato.jpg" class="product-image" alt="Product 2">
+                    <div class="product-info">
+                        <h4 class="product-name">Organic Potatoes</h4>
+                        <p class="product-price">$2.50 per kg</p>
+                        <button class="btn btn-primary btn-view" data-toggle="modal" data-target="#loginModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="product-card">
+                    <img src="../static/images/lettuce.jpg" class="product-image" alt="Product 3">
+                    <div class="product-info">
+                        <h4 class="product-name">Green Lettuce</h4>
+                        <p class="product-price">$1.80 per bunch</p>
+                        <button class="btn btn-primary btn-view" data-toggle="modal" data-target="#loginModal">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login / Sign Up Prompt -->
+        <div class="row text-center mt-5">
+            <div class="col-12">
+                <p class="login-signup-prompt">To view more products and complete purchases, please <a href="/login" class="text-success">Login</a> or <a href="/signup" class="text-success">Sign Up</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Login Prompt -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login Required</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>You need to be logged in to view more details about the products. Please login or sign up to access the full content.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="/login" class="btn btn-primary">Login</a>
+                <a href="/signup" class="btn btn-secondary">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="contact-section-title">Get In Touch</h2>
+                <p class="contact-section-subtitle">We'd love to hear from you. Reach out for any inquiries, feedback, or support!</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject of your inquiry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="6" placeholder="Write your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Send Message</button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="success-message" class="alert alert-success mt-3 d-none" role="alert">
+                    Thank you for reaching out! Your message has been sent successfully.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
